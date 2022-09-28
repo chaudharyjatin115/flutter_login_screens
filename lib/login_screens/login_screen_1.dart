@@ -72,10 +72,7 @@ class LoginView extends StatelessWidget {
               CustomLoginButton(
                 buttonColor: Colors.black12,
                 title: 'Log in',
-                onTap: () {
-                  final email = emailController.text;
-                  final password = passwordController.text;
-                },
+                onTap: () {},
               ),
               const SizedBox(height: 40),
               const Text(
@@ -109,7 +106,7 @@ class LoginView extends StatelessWidget {
                 children: [
                   const Text(
                     ' primaryText!',
-                    style: const TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white),
                   ),
                   const SizedBox(
                     width: 1,
@@ -118,7 +115,7 @@ class LoginView extends StatelessWidget {
                     onPressed: () {},
                     child: const Text(
                       'secondry text',
-                      style: const TextStyle(color: Colors.blue),
+                      style: TextStyle(color: Colors.blue),
                     ),
                   ),
                 ],
@@ -148,11 +145,11 @@ class CustomLoginButton extends StatelessWidget {
       width: 375.0,
       child: ElevatedButton(
         onPressed: onTap,
-        child: Text(title!),
         style: ElevatedButton.styleFrom(
-            primary: buttonColor,
+            backgroundColor: buttonColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10))),
+        child: Text(title!),
       ),
     );
   }
